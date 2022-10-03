@@ -28,14 +28,26 @@
         <h1>Jude Tinkler-Davies - Portfolio</h1>
         
         <h2>Homework 1</h2>
-        <h3>UK Inflation</h3>
+        <h3>Uploading 2 graphs using code from rapidcharts.io</h3>
+        <h4>UK Inflation</h4>
         <p>The first chart tracks the inflation rate in the UK using 3 different measures for this: CPI, RPI and the CPI with housing costs.</p>
         <div class="chart" id="Chart1"></div>
 
         <h3>The causes of CPI</h3>
         <p>My second chart looks at a breakdown of CPI and each sectors contribution to inflation</p>
         <div class="chart" id="Chart2"> </div>
+
     </div> 
+    <div class="myWeek2">
+        <h2>Homework 2</h2>
+        <h3>Replicating a graph from the FT, improving it and uploading an original graph delivered by an API</h3>
+        <p>A replication of the original graph</p>
+        <div class="chart" id="ChartIMForiginal"> </div>
+
+        <p>An adaptation of the original graph showing IMF lending outstanding as a percentage of the global GDP</p>
+        <div class="chart" id="ChartIMFupdated"> </div>
+
+    </div>
 </body>
 
 
@@ -43,12 +55,14 @@
     //Define charts:
     var myChart1 = "chart1_inflation.comparisons.json";
     var myChart2 = "chart2_inflation.sources.json";
+    var myChartIMForiginal = "IMF_edited_graph";
+    var myChartIMFupdated = "IMF_upated.graph";
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#ChartIMForiginal', myChartIMForiginal);
+    vegaEmbed('#ChartIMFupdated', myChartIMFupdated);
 </script>
 
 </html>
-
-
