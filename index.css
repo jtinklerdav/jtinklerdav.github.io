@@ -1,50 +1,178 @@
-/* Jude Tinkler-Davies, Data Science for Economists */
+/* FONTS: */
 
-/* This is my first proper css file */
-
-
-/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: #5ebec4;
- 
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-h1, h2, h3, h4, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #5ebec4 ;
+    color: #67777e;
     text-align: center;
 }
 
-    
-.myWeek1{
-    margin: auto;
-    max-width: 600px;
-    background-color: #fdf5df;
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-variant: small-caps;
+    color:#4ba7b8;
+    background-color: #c4cfd1;
+    text-align: center;
 }
 
 
-/* Set the apperance of the class, chart */
-.chart{
-    background-color: white;
-    width:400px;
-    border-width: 2px;
+/* AREAS OF THE PAGE */
+
+body{
+    background-color: #c4cfd1;
+}
+
+.wrap{
+    background-color: #536f7a;
+}
+
+
+
+
+/* BUTTONS */
+
+a{
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    margin:20px
+
+}
+
+
+#link1{
+    background-color: #67777e;
+
+    padding:20px;
+    
+    border:2px;
+    border-color:#87b4c7;
     border-style: solid;
     border-radius: 10px;
-    border-color: #f92c85;
-    
 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:#aae2fa;
+    
+    text-decoration: none;
     
 }
-    
 
-.myWeek2{
-    margin: auto;
-    max-width: 600px;
-    background-color: #fdf5df;
+#link1:hover{
+
+    background-color: #87b4c7;
+
+    border:2px;
+    border-color:#67777e;
+    border-style: solid;
+    
 }
+
+#link2{
+    background-color: #67777e;
+
+    padding:20px;
+    
+    border:2px;
+    border-color:#87b4c7;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:#aae2fa;
+    
+    text-decoration: none;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#link2:hover{
+
+    background-color: #87b4c7;
+
+    border:2px;
+    border-color:#67777e;
+    border-style: solid;
+    
+}
+
+#link3{
+    background-color: #67777e;
+
+    padding:20px;
+    
+    border:2px;
+    border-color:#87b4c7;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:#aae2fa;
+    
+    text-decoration: none;
+    
+}
+
+#link3:hover{
+
+    background-color: #87b4c7;
+
+    border:2px;
+    border-color:#67777e;
+    border-style: solid;
+    
+}
+
+
+/*#link4{
+    background-color: yellow;
+
+    padding:20px;
+    
+    border:20px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:700;
+    color:grey;
+    
+    text-decoration: none;
+
+    animation: border-pulsate1 4s infinite;
+}
+
+
+
+
+
+/* CODE FOR PUSLING BORDERS */
+  @keyframes border-pulsate1 {
+    0%   { border-color: rgba(230, 34, 75, 1); }
+    50%  { border-color: rgba(230, 34, 75, 0); }
+    100% { border-color: rgba(230, 34, 75, 1); }
+  }
+  
+  @keyframes border-pulsate2 {
+    0%   { border-color: #22e68b}
+    10%  { border-color: rgba(230, 34, 75, 0)}
+    20%  { border-color: rgba(230, 34, 75)}
+    30%  { border-color: rgba(230, 34, 75, 0)}
+    40%  { border-color: rgba(0, 47, 167)}
+    50%  { border-color: rgba(230, 34, 75, 0)}
+    60%  { border-color: rgba(250, 250, 0)}
+    70%  { border-color: rgba(230, 34, 75, 0)}
+    80% { border-color: #22e68b}
+  }
+
+  @keyframes myAnimation {
+    0%   {border-color: #22e68b; background-color: black}      
+    50%  {border-color: black; background-color:yellow}
+    
+  }
+/* CODE FOR PUSLING BORDERS */
