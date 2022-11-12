@@ -31,21 +31,41 @@
         <h3>Uploading 2 graphs using code from rapidcharts.io</h3>
         <h4>UK Inflation</h4>
         <p>The first chart tracks the inflation rate in the UK using 3 different measures for this: CPI, RPI and the CPI with housing costs.</p>
-        <div class="chart" id="Chart1"></div>
+        <div class="chart" id="Chart1">
+            <script>
+                var myChart1 = "chart1_inflation_comparisons.json";
+                vegaEmbed('#Chart1', myChart1);
+            </script>
+        </div>
 
         <h3>The causes of CPI</h3>
         <p>My second chart looks at a breakdown of CPI and each sectors contribution to inflation</p>
-        <div class="chart" id="Chart2"> </div>
+        <div class="chart" id="Chart2"> 
+            <script>
+                var myChart2 = "chart2_inflation_sources.json";
+                vegaEmbed('#Chart2', myChart2);
+            </script>
+        </div>
 
     </div> 
     <div class="myWeek2">
         <h2>Homework 2</h2>
         <h3>Replicating a graph from the FT, improving it and uploading an original graph delivered by an API</h3>
         <p>A replication of the original graph</p>
-        <div class="chart" id="ChartIMForiginal"> </div>
+        <div class="chart" id="ChartIMForiginal"> 
+            <script>
+                var myChartIMForiginal = "IMF_edited_graph.json";
+                vegaEmbed('#ChartIMForiginal', myChartIMForiginal);
+            </script>
+        </div>
 
         <p>An adaptation of the original graph showing IMF lending outstanding as a percentage of the global GDP in that year</p>
-        <div class="chart" id="ChartIMFupdated"> </div>
+        <div class="chart" id="ChartIMFupdated"> 
+            <script>
+                var myChartIMFupdated = "IMF_updated_graph.json";
+                vegaEmbed('#ChartIMFupdated', myChartIMFupdated);
+            </script>
+        </div>
         <p>Having adjusted the data to show credit outstanding as a percentage of global GDP, the riskiest year for investing was in fact 1984.</p>
 
     </div>
@@ -53,73 +73,88 @@
         <h2>Homework 3</h2>
         <h3>Creating a chart from scratch using inline data. I sourced my data from the World Bank database which I then downloaded onto my computer before uploading it and cleaning it in Google Colab. This then made it suitable for use in vega-lite online editor which I used to edit and create the line chart seen.</h3>
         <p>This graph shows the access to electricity amongst different regions. I have also included the World to compare each regions performance in the global setting.</p>
-        <div class="chart" id="ChartElectricity1_1"> </div>
+        <div class="chart" id="ChartElectricity1_1"> 
+            <script>
+                var myChartElectricity1_1 = "ChartElectricity1_1.json";
+                vegaEmbed('#ChartElectricity1_1',myChartElectricity1_1);
+            </script>
+        </div>
         <p>I have now used a different visualisation technique using the dataset. I have opted for an interactive bar chart where a slider is used to select the year desired and compare the access to electricity between the regions. I prefer the first graph as it gives a global perspective over time rather than only being able to see a single year in time.</p>
-        <div class="chart" id="ChartElectricity2"></div>
+        <div class="chart" id="ChartElectricity2">
+            <script>
+                var myChartElectricity2 = "ChartElectricity2.json";
+                vegaEmbed('#ChartElectricity2', myChartElectricity2);
+            </script>
+        </div>
     </div>
 
     <div class="myWeek4">
         <h2>Homework 4</h2>
         <h3>Scraping data from a website, editing the dataset in Google Colab then create a chart.</h3>
         <p>I scraped my data from this academic paper (), I then had to edit it and put into long form so that the data could then be placed into a multi-series line chart.</p>
-        <div class="chart" id=""> </div>
+        <div class="chart" id="">     </div>
     </div>
 
     <div class="myWeek5">
         <h2>Homework 5</h2>
         <h3>Using the ONS API to batch download 9 series as JSON files, using loops. Then Creating a dashboard of these 9 graphs all based around one topic. </h3>
         <p>Using Google Colab (link), I was able to create a loop to download the data to create 9 graphs providing information on the UK Labour Market.</p>
-        <div class="chart" id="ChartONS_MGRZ"> </div>
-        <div class="chart" id="ChartONS_LF24"> </div>
-        <div class="chart" id="ChartONS_MGSV"> </div>
-        <div class="chart" id="ChartONS_YBUE"> </div>
-        <div class="chart" id="ChartONS_LF25"> </div>
-        <div class="chart" id="ChartONS_YBUF"> </div>
-        <div class="chart" id="ChartONS_YBUD"> </div>
-        <div class="chart" id="ChartONS_LF2Q"> </div>
-        <div class="chart" id="ChartONS_LF2S"> </div>
+        <div class="chart" id="ChartONS_MGRZ"> 
+            <script>
+                var ONS_MGRZ = "Chart_ONS_MGRZ.json";
+                vegaEmbed('#ChartONS_MGRZ', ONS_MGRZ);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_LF24"> 
+            <script>
+                var ONS_LF24 = "Chart_ONS_LF24.json";
+                vegaEmbed('#ChartONS_LF24', ONS_LF24);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_MGSV"> 
+            <script>
+                var ONS_MGSV = "Chart_ONS_MGSV.json";
+                vegaEmbed('#ChartONS_MGSV', ONS_MGSV);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_YBUE"> 
+            <script>
+                var ONS_YBUE = "Chart_ONS_YBUE.json";
+                vegaEmbed('#ChartONS_YBUE', ONS_YBUE);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_LF25"> 
+            <script>
+                var ONS_LF25 = "Chart_ONS_LF25.json";
+                vegaEmbed('#ChartONS_LF25', ONS_LF25);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_YBUF"> 
+            <script>
+                var ONS_YBUF = "Chart_ONS_YBUF.json";
+                vegaEmbed('#ChartONS_YBUF', ONS_YBUF)
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_YBUD"> 
+            <script>
+                var ONS_YBUD = "Chart_ONS_YBUD.json";
+                vegaEmbed('#ChartONS_YBUD', ONS_YBUD);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_LF2Q"> 
+            <script>
+                var ONS_LF2Q = "Chart_ONS_LF2Q.json";
+                vegaEmbed('#ChartONS_LF2Q', ONS_LF2Q);
+            </script>
+        </div>
+        <div class="chart" id="ChartONS_LF2S"> 
+            <script>
+                var ONS_LF2S = "Chart_ONS_LF2S.json";
+                vegaEmbed('#ChartONS_LF2S', ONS_LF2S);
+            </script>
+        </div>
 
     </div>
 </body>
-
-
-<script>
-    //Define charts:
-    var myChart1 = "chart1_inflation_comparisons.json";
-    var myChart2 = "chart2_inflation_sources.json";
-    var myChartIMForiginal = "IMF_edited_graph.json";
-    var myChartIMFupdated = "IMF_updated_graph.json";
-    var myChartElectricity1_1 = "ChartElectricity1_1.json";
-    var myChartElectricity2 = "ChartElectricity2.json";
-    //week 4
-    var ONS_LF2Q = "Chart_ONS_LF2Q.json";
-    var ONS_LF2S = "Chart_ONS_LF2S.json";
-    var ONS_LF24 = "Chart_ONS_LF24.json";
-    var ONS_LF25 = "Chart_ONS_LF25.json";
-    var ONS_MGRZ = "Chart_ONS_MGRZ.json";
-    var ONS_MGSV = "Chart_ONS_MGSV.json";
-    var ONS_YBUD = "Chart_ONS_YBUD.json";
-    var ONS_YBUE = "Chart_ONS_YBUE.json";
-    var ONS_YBUF = "Chart_ONS_YBUF.json";
-
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#ChartIMForiginal', myChartIMForiginal);
-    vegaEmbed('#ChartIMFupdated', myChartIMFupdated);
-    vegaEmbed('#ChartElectricity1_1',myChartElectricity1_1);
-    vegaEmbed('#ChartElectricity2', myChartElectricity2);
-    //week 4
-    vegaEmbed('#ChartONS_LF2Q', ONS_LF2Q);
-    vegaEmbed('#ChartONS_LF2S', ONS_LF2S);
-    vegaEmbed('#ChartONS_LF24', ONS_LF24);
-    vegaEmbed('#ChartONS_LF25', ONS_LF25);
-    vegaEmbed('#ChartONS_MGRZ', ONS_MGRZ);
-    vegaEmbed('#ChartONS_MGSV', ONS_MGSV);
-    vegaEmbed('#ChartONS_YBUD', ONS_YBUD);
-    vegaEmbed('#ChartONS_YBUE', ONS_YBUE);
-    vegaEmbed('#ChartONS_YBUF', ONS_YBUF)
-
-    </script>
 
 </html>
