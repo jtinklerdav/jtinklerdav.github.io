@@ -10,7 +10,6 @@
 /* Set the background color for my page: */
 body{
     background-color: #5ebec4;
- 
 }
 
 
@@ -31,6 +30,14 @@ h1, h2, h3, h4, p{
     border-color: #f92c85;
     
 }    
+.chart2{
+    background-color: white;
+    width:250px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #f92c85;
+}    
 
 .myWeek1{
     margin: auto;
@@ -43,7 +50,6 @@ h1, h2, h3, h4, p{
     max-width: 600px;
     background-color: #fdf5df;
 }
-
 .myWeek3{
     margin: auto;
     max-width: 600px;
