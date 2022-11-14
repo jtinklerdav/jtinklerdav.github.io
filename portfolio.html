@@ -76,14 +76,14 @@
         <div class="chart" id="ChartElectricity1_1"> 
             <script>
                 var myChartElectricity1_1 = "ChartElectricity1_1.json";
-                vegaEmbed('#ChartElectricity1_1',myChartElectricity1_1);
+                vegaEmbed('#ChartElectricity1_1', myChartElectricity1_1)
             </script>
         </div>
         <p>I have now used a different visualisation technique using the dataset. I have opted for an interactive bar chart where a slider is used to select the year desired and compare the access to electricity between the regions. I prefer the first graph as it gives a global perspective over time rather than only being able to see a single year in time.</p>
         <div class="chart" id="ChartElectricity2">
             <script>
                 var myChartElectricity2 = "ChartElectricity2.json";
-                vegaEmbed('#ChartElectricity2', myChartElectricity2);
+                vegaEmbed('#ChartElectricity2', myChartElectricity2)
             </script>
         </div>
     </div>
@@ -92,68 +92,87 @@
         <h2>Homework 4</h2>
         <h3>Scraping data from a website, editing the dataset in Google Colab then create a chart.</h3>
         <p>I scraped my data from this academic paper (), I then had to edit it and put into long form so that the data could then be placed into a multi-series line chart.</p>
-        <div class="chart" id="">     </div>
+        <div class="chart" id=""> </div>
     </div>
 
     <div class="myWeek5">
         <h2>Homework 5</h2>
         <h3>Using the ONS API to batch download 9 series as JSON files, using loops. Then Creating a dashboard of these 9 graphs all based around one topic. </h3>
         <p>Using Google Colab (link), I was able to create a loop to download the data to create 9 graphs providing information on the UK Labour Market.</p>
-        <div class="chart" id="ChartONS_MGRZ"> 
+        <div class="chart2" id="ChartONS_MGRZ"> 
             <script>
                 var ONS_MGRZ = "Chart_ONS_MGRZ.json";
                 vegaEmbed('#ChartONS_MGRZ', ONS_MGRZ);
             </script>
         </div>
-        <div class="chart" id="ChartONS_LF24"> 
+        <div class="chart2" id="ChartONS_LF24"> 
             <script>
                 var ONS_LF24 = "Chart_ONS_LF24.json";
                 vegaEmbed('#ChartONS_LF24', ONS_LF24);
             </script>
         </div>
-        <div class="chart" id="ChartONS_MGSV"> 
+        <div class="chart2" id="ChartONS_MGSV"> 
             <script>
                 var ONS_MGSV = "Chart_ONS_MGSV.json";
                 vegaEmbed('#ChartONS_MGSV', ONS_MGSV);
             </script>
         </div>
-        <div class="chart" id="ChartONS_YBUE"> 
+        <div class="chart2" id="ChartONS_YBUE"> 
             <script>
                 var ONS_YBUE = "Chart_ONS_YBUE.json";
                 vegaEmbed('#ChartONS_YBUE', ONS_YBUE);
             </script>
         </div>
-        <div class="chart" id="ChartONS_LF25"> 
+        <div class="chart2" id="ChartONS_LF25"> 
             <script>
                 var ONS_LF25 = "Chart_ONS_LF25.json";
                 vegaEmbed('#ChartONS_LF25', ONS_LF25);
             </script>
         </div>
-        <div class="chart" id="ChartONS_YBUF"> 
+        <div class="chart2" id="ChartONS_YBUF"> 
             <script>
                 var ONS_YBUF = "Chart_ONS_YBUF.json";
                 vegaEmbed('#ChartONS_YBUF', ONS_YBUF)
             </script>
         </div>
-        <div class="chart" id="ChartONS_YBUD"> 
+        <div class="chart2" id="ChartONS_YBUD"> 
             <script>
                 var ONS_YBUD = "Chart_ONS_YBUD.json";
                 vegaEmbed('#ChartONS_YBUD', ONS_YBUD);
             </script>
         </div>
-        <div class="chart" id="ChartONS_LF2Q"> 
+        <div class="chart2" id="ChartONS_LF2Q"> 
             <script>
                 var ONS_LF2Q = "Chart_ONS_LF2Q.json";
                 vegaEmbed('#ChartONS_LF2Q', ONS_LF2Q);
             </script>
         </div>
-        <div class="chart" id="ChartONS_LF2S"> 
+        <div class="chart2" id="ChartONS_LF2S"> 
             <script>
                 var ONS_LF2S = "Chart_ONS_LF2S.json";
                 vegaEmbed('#ChartONS_LF2S', ONS_LF2S);
             </script>
         </div>
 
+    </div>
+
+    <div class="myWeek7">
+        <h2>Homework 7</h2>
+        <h3>Creating a base map of a region and then using the base map to create a choropleth map using the "lookup" transformation</h3>
+        <p>A base map depicting Europe with a "tooltip" encoding to show the country when the user hovers over a country.</p>
+        <div class="chart" id="BaseMap"> 
+            <script>
+                var myChartEUBaseMap = "EU_base_map.json";
+                vegaEmbed('#BaseMap', myChartEUBaseMap)
+            </script>
+        </div>
+        <p>The second map shows the countries of Europe whose colour is varied by their Official 2022 Fifa Rankings. The Eastern and smaller Countries generally have a lower rating compared to the Western Countries.</p>
+        <div class="chart" id="ChartFifaMap">
+            <script>
+                var myChartFifaRankings = "Chart_Fifa_Rankings.json";
+                vegaEmbed('#ChartFifaMap', myChartFifaRankings)
+            </script>
+        </div>
     </div>
 </body>
 
