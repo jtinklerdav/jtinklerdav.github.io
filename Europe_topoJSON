@@ -8406,7 +8406,7 @@
 "type": null,
 "properties": {
 "type": "Country",
-"geounit": "Aland"
+"geounit": "Finland"
 }
 },
 {
@@ -8446,7 +8446,7 @@
 "type": null,
 "properties": {
 "type": "Geounit",
-"geounit": "BrusselsCapitalRegion"
+"geounit": "Belgium"
 }
 },
 {
@@ -8465,7 +8465,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "FlemishRegion"
+"geounit": "Belgium"
 }
 },
 {
@@ -8496,7 +8496,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "BosniaandHerzegovina"
+"geounit": "Bosnia and Herzegovina"
 }
 },
 {
@@ -8517,7 +8517,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "RepublicSrpska"
+"geounit": "Bosnia and Herzegovina"
 }
 },
 {
@@ -8551,7 +8551,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "WalloonRegion"
+"geounit": "Belgium"
 }
 },
 {
@@ -8724,7 +8724,7 @@
 "type": null,
 "properties": {
 "type": "Dependency",
-"geounit": "FaroeIslands"
+"geounit": "Faroe Islands"
 }
 },
 {
@@ -8760,21 +8760,21 @@
 "type": null,
 "properties": {
 "type": "Geosubunit",
-"geounit": "Guernsey"
+"geounit": "England"
 }
 },
 {
 "type": null,
 "properties": {
 "type": "Geosubunit",
-"geounit": "Guernsey"
+"geounit": "England"
 }
 },
 {
 "type": null,
 "properties": {
 "type": "Geosubunit",
-"geounit": "Guernsey"
+"geounit": "England"
 }
 },
 {
@@ -8787,7 +8787,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Dependency",
-"geounit": "Gibraltar"
+"geounit": "Spain"
 }
 },
 {
@@ -8880,7 +8880,7 @@
 "type": null,
 "properties": {
 "type": "Country",
-"geounit": "IsleofMan"
+"geounit": "England"
 }
 },
 {
@@ -9066,7 +9066,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Sovereigncountry",
-"geounit": "Macedonia"
+"geounit": "North Macedonia"
 }
 },
 {
@@ -9103,14 +9103,14 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "NorthernIreland"
+"geounit": "Northern Ireland"
 }
 },
 {
 "type": null,
 "properties": {
 "type": "Geounit",
-"geounit": "JanMayen"
+"geounit": "Norway"
 }
 },
 {
@@ -9196,7 +9196,7 @@
 "type": "MultiPolygon",
 "properties": {
 "type": "Geounit",
-"geounit": "Svalbard"
+"geounit": "Norway"
 }
 },
 {
@@ -9363,7 +9363,7 @@
 "type": null,
 "properties": {
 "type": "Sovereigncountry",
-"geounit": "SanMarino"
+"geounit": "San Marino"
 }
 },
 {
@@ -9397,7 +9397,7 @@
 "type": "Polygon",
 "properties": {
 "type": "Geounit",
-"geounit": "Vojvodina"
+"geounit": "Serbia"
 }
 },
 {
