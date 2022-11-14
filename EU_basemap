@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+        "width": 400,
+        "height": 400,
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Europe_topoJSON",
+        "format": {"type": "topojson",
+        "feature": "continent_Europe_subunits"}},
+        "projection": {"type": "mercator"},
+  
+        "mark": {"type": "geoshape",
+        "stroke": "darkgrey",
+        "strokeWidth": 0.5},
+  
+        "encoding": {
+          "tooltip": [
+            {"field": "properties.geounit", "type": "nominal", "title": "Country"}
+          ]
+        }
+  
+  
+  }
