@@ -23,16 +23,37 @@ h1, h2, h3, h4, p{
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
-    width:400px;
+    width: 400px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #f92c85;
+    margin-bottom: 20px;  
+}
+
+.chartelec{
+    background-color: white;
+    width:550px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #f92c85;
+    margin-bottom: 20px;  
+}  
+
+
+.chart2{
+    background-color: white;
+    width:300px;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
     border-color: #f92c85;
-    
 }    
-.chart2{
+
+.chart3{
     background-color: white;
-    width:250px;
+    width:500px;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
@@ -43,30 +64,48 @@ h1, h2, h3, h4, p{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }   
 
 .myWeek2{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .myWeek3{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .myWeek4{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .myWeek5{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .myWeek7{
     margin: auto;
     max-width: 600px;
     background-color: #fdf5df;
+    border: solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
