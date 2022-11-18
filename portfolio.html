@@ -73,10 +73,10 @@
         <h2>Homework 3</h2>
         <h3>Creating a chart from scratch using inline data. I sourced my data from the World Bank database which I then downloaded onto my computer before uploading it and cleaning it in Google Colab. This then made it suitable for use in vega-lite online editor which I used to edit and create the line chart seen.</h3>
         <p>This graph shows the access to electricity amongst different regions. I have also included the World to compare each regions performance in the global setting.</p>
-        <div class="chart" id="ChartElectricity1_1"> 
+        <div class="chartelec" id="ChartElectricity1_4"> 
             <script>
-                var myChartElectricity1_1 = "ChartElectricity1_1.json";
-                vegaEmbed('#ChartElectricity1_1', myChartElectricity1_1)
+                var myChartElectricity1_4 = "ChartElectricity1_4.json";
+                vegaEmbed('#ChartElectricity1_4', myChartElectricity1_4)
             </script>
         </div>
         <p>I have now used a different visualisation technique using the dataset. I have opted for an interactive bar chart where a slider is used to select the year desired and compare the access to electricity between the regions. I prefer the first graph as it gives a global perspective over time rather than only being able to see a single year in time.</p>
@@ -160,14 +160,14 @@
         <h2>Homework 7</h2>
         <h3>Creating a base map of a region and then using the base map to create a choropleth map using the "lookup" transformation</h3>
         <p>A base map depicting Europe with a "tooltip" encoding to show the country when the user hovers over a country.</p>
-        <div class="chart" id="BaseMap"> 
+        <div class="chart3" id="BaseMap"> 
             <script>
                 var myChartEUBaseMap = "EU_base_map.json";
                 vegaEmbed('#BaseMap', myChartEUBaseMap)
             </script>
         </div>
         <p>The second map shows the countries of Europe whose colour is varied by their Official 2022 Fifa Rankings. The Eastern and smaller Countries generally have a lower rating compared to the Western Countries.</p>
-        <div class="chart" id="ChartFifaMap">
+        <div class="chart3" id="ChartFifaMap">
             <script>
                 var myChartFifaRankings = "Chart_Fifa_Rankings.json";
                 vegaEmbed('#ChartFifaMap', myChartFifaRankings)
