@@ -32,26 +32,26 @@
         "type": "quantitative",
         "scale": {"domain": [0, 90000]},
         "axis":{"grid": false},
-        "title":"GDP per capita"},
+        "title":"GDP per capita (US$)"},
   
       "y": {
         "field": "Consumption pc", 
         "type": "quantitative",
         "scale": {"domain": [0, 45]},
         "axis":{"grid": false},
-        "title":"Consumption per capita"},
+        "title":"Consumption per capita (litres)"},
   
       "size": {
         "field": "Population (thousands)", 
         "type": "quantitative",
         "title":"Population",
-        "scale": { "range": [0, 1410]},
+        "scale": { "range": [0, 1400]},
         "legend":null},
 
       "tooltip":[
         {"field":"Country Name", "type": "ordinal", "title":"Country"},
-        {"field":"GDP pc", "type": "quantitative", "title":"GDP per capita", "format":".0f"},
-        {"field":"Consumption pc", "type": "quantitative", "title":"Consumption per Capita", "format":".2f"},
+        {"field":"GDP pc", "type": "quantitative", "title":"GDP per capita", "format":".1f"},
+        {"field":"Consumption pc", "type": "quantitative", "title":"Wine Consumption per Capita", "format":".2f"},
         {"field":"Population", "type": "quantitative", "title":"Population", "format":","}
 
       ]
