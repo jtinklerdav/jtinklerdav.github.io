@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+        "width": 600,
+        "height": 500,
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/norettevulkan/norettevulkan.github.io/main/topojson_improved.json",
+        "format": {"type": "topojson",
+        "feature": "countries"}},
+        "projection": {"type": "naturalEarth1"},
+
+
+        "transform": [
+          {
+            "lookup": "properties.geounit",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/country_production_2021"},
+                "key": "Country",
+                "fields": ["Rank"]
+              }
+            }
+        ],
+  
+        "mark": {"type": "geoshape",
+        "stroke": "darkgrey",
+        "strokeWidth": 0.5},
+
+          
+        "encoding": {
+          "color":{
+            "field": "Rank",
+            "type": "quantitative"
+          },
+          "tooltip": [
+            {"field": "properties.name", "type": "nominal", "title": "Country"}
+          ]
+        }
+  
+  
+  }
