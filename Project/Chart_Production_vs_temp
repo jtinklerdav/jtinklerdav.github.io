@@ -1,0 +1,43 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Comparing production amount to avergae country temperature",
+
+  "title": {
+    "text": "Wine production and Climate",
+    "subtitle":["Average Teemperature (x), and Wine production (y)",""],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_temperature_production"
+  },
+
+  "mark": {
+    "type":"circle",
+    "size":150,
+    "color":"rgb(0,67,167)",
+    "opacity":0.6},
+  
+  "height": 300,
+  "width": 300,
+
+  "encoding": {
+
+    "y": {
+      "field": "Quantity", 
+      "type": "quantitative",
+      "scale": {"domain": [0, 50000]},
+      "title":"2019 Production (1000hl)"
+      },
+
+    "x": {
+      "field": "AvgTemp", 
+      "type": "quantitative",
+      "scale": {"domain": [0,25]},
+      "title":"Average Temperature (celcius)"
+      }
+   }
+}
