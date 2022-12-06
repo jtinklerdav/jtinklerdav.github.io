@@ -1,0 +1,20 @@
+ { "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {"url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_export_clean"},
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Year",
+     "type": "ordinal"},
+    "y": {
+      "field": "Export Quantity",
+      "title": "Export Quantity (Thousand US$)",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0,45000000]
+      }},
+    "color": {
+      "field": "Exporters",
+      "type": "nominal"}
+  }
+}
