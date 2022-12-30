@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Comparing the export of wine",
+  "title": {
+    "text": "Wine Trade increasing in the 21st Century",
+    "subtitle": [
+      "Wine Exports over time",
+      "Indexed, 2002=100",
+      "Source: Trademap.org"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_final_export.json"
+  },
+  "height": 300,
+  "width": 400,
+  "background": null,
+  "transform": [
+    {"calculate": "timeParse(datum.Year, '%Y')", "as": "date"}
+  ],
+  "encoding": {
+    "x": {"field": "date",
+    "type": "temporal",
+    "axis": {"grid": false, "ticks": false}
+    },
+    "y": {
+      "field": "Export Quantity (US$)",
+      "title": "Export Quantity",
+      "type": "quantitative",
+      "axis": {"grid": false, "ticks": false},
+      "scale": {"domain": [0, 750]}
+    },
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "Exporters",
+        "type": "nominal",
+        "legend": {"title": "", "orient": "right"},
+        "scale": {"scheme": "yelloworangered"}
+      },
+      "value": "black"
+    },
+    "tooltip": [
+      {"field": "Exporters", "title": "Country"},
+      {"field": "Year", "title": "Year"},
+      {
+        "field": "Export Quantity (US$)",
+        "title": "Export Quantity (2002 = 100)"
+      }
+    ],
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make selection easier",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Exporters": "Argentina"}],
+          "select": {
+            "type": "point",
+            "fields": ["Exporters"],
+            "on": "mouseover"
+          }
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 10, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ]
+}

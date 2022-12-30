@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Wine Exportation Growth",
+    "data": {
+      "values": [{"Country": "France", "Time Period": "1957-1967", "Export Growth": "6.2"}, {"Country": "France", "Time Period": "1968-1978", "Export Growth": 7.9}, {"Country": "France", "Time Period": "1979-1986", "Export Growth": 6.8}, {"Country": "France", "Time Period": "1987-1998", "Export Growth": 1.9}, {"Country": "France", "Time Period": "1999-2007", "Export Growth": -0.8}, {"Country": "France", "Time Period": "2008-2016", "Export Growth": 0.9}, {"Country": "Germany", "Time Period": "1957-1967", "Export Growth": "3.2"}, {"Country": "Germany", "Time Period": "1968-1978", "Export Growth": 19.7}, {"Country": "Germany", "Time Period": "1979-1986", "Export Growth": 6.3}, {"Country": "Germany", "Time Period": "1987-1998", "Export Growth": -1.5}, {"Country": "Germany", "Time Period": "1999-2007", "Export Growth": 5.1}, {"Country": "Germany", "Time Period": "2008-2016", "Export Growth": 0.1},{"Country": "Italy", "Time Period": "1957-1967", "Export Growth": "3.7"}, {"Country": "Italy", "Time Period": "1968-1978", "Export Growth": 16.3}, {"Country": "Italy", "Time Period": "1979-1986", "Export Growth": -6.8}, {"Country": "Italy", "Time Period": "1987-1998", "Export Growth": 3.5}, {"Country": "Italy", "Time Period": "1999-2007", "Export Growth": 1.3}, {"Country": "Italy", "Time Period": "2008-2016", "Export Growth": 1.3}, {"Country": "Portugal", "Time Period": "1957-1967", "Export Growth": "3.4"}, {"Country": "Portugal", "Time Period": "1968-1978", "Export Growth": -5.4}, {"Country": "Portugal", "Time Period": "1979-1986", "Export Growth": 1.0}, {"Country": "Portugal", "Time Period": "1987-1998", "Export Growth": 3.3}, {"Country": "Portugal", "Time Period": "1999-2007", "Export Growth": 7.6}, {"Country": "Portugal", "Time Period": "2008-2016", "Export Growth": -0.4}, {"Country": "Spain", "Time Period": "1957-1967", "Export Growth": "6.0"}, {"Country": "Spain", "Time Period": "1968-1978", "Export Growth": 3.7}, {"Country": "Spain", "Time Period": "1979-1986", "Export Growth": -2.3}, {"Country": "Spain", "Time Period": "1987-1998", "Export Growth": 7.7}, {"Country": "Spain", "Time Period": "1999-2007", "Export Growth": 6.7}, {"Country": "Spain", "Time Period": "2008-2016", "Export Growth": 4.9}, {"Country": "EU7 (mean)", "Time Period": "1957-1967", "Export Growth": "3.0"}, {"Country": "EU7 (mean)", "Time Period": "1968-1978", "Export Growth": 10.5}, {"Country": "EU7 (mean)", "Time Period": "1979-1986", "Export Growth": -3.2}, {"Country": "EU7 (mean)", "Time Period": "1987-1998", "Export Growth": 3.9}, {"Country": "EU7 (mean)", "Time Period": "1999-2007", "Export Growth": 3.3}, {"Country": "EU7 (mean)", "Time Period": "2008-2016", "Export Growth": 0.7}]
+      },
+      "width":300,
+      "height":300,
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Time Period", "type": "ordinal"},
+      "y": {"field": "Export Growth", "type": "quantitative"},
+      "color": {"field": "Country", "type": "nominal"}
+    }
+  }

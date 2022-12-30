@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+ "title": {
+  "text": "Global Productivity Increasing",
+  "subtitle":["Grape Production and Vineyard Surface Area","Source: OIV Statistics"],
+  "subtitleFontStyle":"italic",
+  "subtitleFontSize":10,
+  "anchor": "start"},
+
+  "width":300,
+  "height":300,
+  "background":null,
+
+
+  "data": {
+    "name":"myData",
+    "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_final_sa_production"},
+
+    "transform": [
+    {"calculate": "timeParse(datum.Year, '%Y')", "as": "date"},
+    {"filter": "datum.Year>minYear"},
+    {"filter": "datum.Year<maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1995,
+      "bind": {
+        "input": "range",
+        "min": 1995,
+        "max": 2022,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 1995,
+        "max": 2022,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+
+
+  "encoding": {     
+      "x": {
+        "field": "date",
+        "title":null,
+        "type": "temporal",
+        "axis": {"grid": false, "ticks": false}}
+        },
+          
+   "layer":[
+
+      {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1.5,
+          "width":1
+        },
+
+      "encoding": {
+          "y": {
+          "field": "Fresh Grape production (tonnes)",
+          "type": "quantitative",
+          "title": "Fresh Grape Production (tonnes)",
+          "axis": {
+            "grid": false,            
+            "ticks": false},
+            "scale": {"domain": [50000000,85000000]}
+            },
+            
+          "color": {
+            "datum": "Fresh Grape production (tonnes)",
+            "scale": {"range": ["blue", "red"]},
+            "legend":{
+              "orient": "right"}}}
+      },
+
+     {"mark": {
+          "type": "line",
+          "point": false,
+          "strokeWidth":1.5
+        },
+
+      "encoding": {
+          "y": {
+          "field": "Surface Area (hectares)",
+          "type": "quantitative",
+          "title": "Surface Area (hectares)",
+          "axis": {
+            "grid": false,
+            "ticks": false},
+            "scale": {"domain": [7000000,8000000]}
+            },
+
+            "color": {
+            "datum": "Surface Area (hectares)",
+            "scale": {"range": ["orange", "hotpink"]},
+            "legend":{
+              "orient": "right"}}
+            
+            
+          
+        
+        } 
+    }
+],
+
+    "resolve": {"scale": {"y": "independent"}} 
+}
