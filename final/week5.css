@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+
+
+p {
+	font-size: 16px;
+	margin: 5px 5px;
+	line-height: 22.4px;
+	color: #1995ad;
+    text-align: center;
+}
+
+body {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 400;
+	background-color: #bcbabe;
+	max-width: 1800px; 
+	margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+	float: none !important; 
+}
+
+/* ------------------------------------------------------------------------------
+	Grid stuff
+-------------------------------------------------------------------------------*/
+
+.gridf {
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 1400px; 
+  margin: 0 auto 0 auto !important;
+  padding: 0 5 0 5; 
+  grid-column-gap: 57px;
+  grid-row-gap: 50px;
+}
+.gridf > div {
+  background-color: #f1f1f2;
+  padding: 5px;
+  border-radius: 5px;
+  width: 365px;
+  margin: auto
+}
+.gridf > div:nth-child(3n + 2) {
+  background-color: #f1f1f2;
+}
+.gridf > div:nth-child(3n) {
+  background-color: #f1f1f2;
+}
+
+
+/* Three columns*/
+@media only screen and (min-width: 1200px) {
+    .gridf, .wrap {
+      grid-template-columns: 30% 30% 30%;
+      max-width: 1200px; 
+      margin: 0 auto 0 auto !important;
+      padding: 0 5 0 5; 
+      grid-column-gap: 57px;
+      grid-row-gap: 50px;
+    }
+    
+    .gridf > div {
+      padding: 6px;
+    }
+  }
+
+  .rubric, .rubric-launch {
+    text-align: justify;
+  }
+
+
+ul {
+	font-size: 18px;
+	margin: 5px 5px;
+	line-height: 22.4px;
+	color: #f1f1f2;
+}
+
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ul, ol {
+	margin: 5px 5px;
+	padding: 0;
+}
+ul li {
+   list-style-position: inside;
+}
+
+
+h1 {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-variant: large;
+	font-size: 50px;
+	color: #1995ad;
+	margin: 30px 0px 30px 0px  ;
+	height: 40px;
+    text-align: center
+}
