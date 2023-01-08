@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Global Access to Electricity",
+    "subtitle": "Level of access varied across different regions",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "description": "CPI contribution",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/DATA_Electricity.json"
+  },
+  "width": 300,
+  "height": 400,
+  "background":null,
+
+  "encoding": {"x": {"field": "Year",
+  "type": "temporal", 
+  "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 45}}},
+  "layer": [
+    {
+      "encoding": {
+        "color": {"field": "Country Name",
+        "type": "nominal"},
+
+        "y": {
+          "field": "Access to Electricity (annual %)",
+        "type": "quantitative",
+        "scale": {"domain": [0,100]},
+        "axis": {"grid": false}}},
+
+      "layer": [
+        {"mark": "line"},
+        {"transform": [
+          {"filter": {"param": "hover", "empty": false}}],
+          "mark": "point"}]
+    },
+
+    {
+      "transform": [
+        {"pivot": "Country Code", 
+      "value": "Access to Electricity (annual %)", 
+     "groupby": ["Year"]}],
+      "mark": "rule",
+
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3,
+          "param": "hover",
+          "empty": false},
+          "value": 0},
+          
+        "tooltip": [
+          {"field": "CEB", "type": "quantitative"},
+          {"field": "MEA", "type": "quantitative"},
+          {"field": "LCN", "type": "quantitative"},
+          {"field": "EAS", "type": "quantitative"},
+          {"field": "SSF", "type": "quantitative"},
+          {"field": "WLD", "type": "quantitative"}
+        ]
+      },
+      "params": [{
+        "name": "hover",
+        "select": {
+          "type": "point",
+          "fields": ["Year"],
+          "nearest": true,
+          "on": "mouseover",
+          "clear": "mouseout"
+        }
+      }]
+    }
+  ]
+}

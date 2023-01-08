@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+
+<title>Jude TD | Dashboard</title>
+
+
+<link rel="stylesheet" href="week5.css">
+
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+
+
+</head>
+
+<body>
+
+<!--this is a heading at the top of my page-->
+ <div class="title">
+     <p>Jude Tinkler-Davies | Student ID: 20056609</p>
+</div>
+
+<!-- This is the title of my dashboard-->
+<div class="wrap">
+    <h1>Portfolio Task 5</h1>
+    <p>ONS Dashboard - Unemployment Statistics<p>
+    <hr>
+    <span style="display:block; height: 15px;"></span>
+  </div>
+
+<!--This is the encoding for the 9 charts on the website-->
+
+<div class="chart" id="ChartONS_MGRZ"> 
+    <script>
+        var ONS_MGRZ = "Chart_ONS_MGRZ.json";
+        vegaEmbed('#ChartONS_MGRZ', ONS_MGRZ);
+    </script>
+</div>
+<div class="chart" id="ChartONS_LF24"> 
+    <script>
+        var ONS_LF24 = "Chart_ONS_LF24.json";
+        vegaEmbed('#ChartONS_LF24', ONS_LF24);
+    </script>
+</div>
+<div class="chart" id="ChartONS_MGSV"> 
+    <script>
+        var ONS_MGSV = "Chart_ONS_MGSV.json";
+        vegaEmbed('#ChartONS_MGSV', ONS_MGSV);
+    </script>
+</div>
+<div class="chart" id="ChartONS_YBUE"> 
+    <script>
+        var ONS_YBUE = "Chart_ONS_YBUE.json";
+        vegaEmbed('#ChartONS_YBUE', ONS_YBUE);
+    </script>
+</div>
+<div class="chart" id="ChartONS_LF25"> 
+    <script>
+        var ONS_LF25 = "Chart_ONS_LF25.json";
+        vegaEmbed('#ChartONS_LF25', ONS_LF25);
+    </script>
+</div>
+<div class="chart" id="ChartONS_YBUF"> 
+    <script>
+        var ONS_YBUF = "Chart_ONS_YBUF.json";
+        vegaEmbed('#ChartONS_YBUF', ONS_YBUF)
+    </script>
+</div>
+<div class="chart" id="ChartONS_YBUD"> 
+    <script>
+        var ONS_YBUD = "Chart_ONS_YBUD.json";
+        vegaEmbed('#ChartONS_YBUD', ONS_YBUD);
+    </script>
+</div>
+<div class="chart" id="ChartONS_LF2Q"> 
+    <script>
+        var ONS_LF2Q = "Chart_ONS_LF2Q.json";
+        vegaEmbed('#ChartONS_LF2Q', ONS_LF2Q);
+    </script>
+</div>
+<div class="chart" id="ChartONS_LF2S"> 
+    <script>
+        var ONS_LF2S = "Chart_ONS_LF2S.json";
+        vegaEmbed('#ChartONS_LF2S', ONS_LF2S);
+    </script>
+</div>
+
+
+</body>
+
+</html>

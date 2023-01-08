@@ -1,0 +1,69 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "title": {
+      "text": "Wine Consumption vs GDP per capita",
+      "subtitle":["GDP per capita (x), Wine Consumption per capita (y). 2020 data","Size of points based on popluation", ""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+  "config": {
+    "background":"white",
+    "view": {
+      "stroke": "transparent"}},
+  
+    "data": {
+      "url" : "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_GDP_vs_Consumption.json"
+       },
+
+       "height": 300,
+  "width": 300,
+  "background":null,
+
+
+"layer":[{
+
+  "mark": {
+    "type":"circle",
+    "color":"rgb(0,47,167)",
+    "size":100},
+ 
+
+  "encoding": {
+    "x": {
+      "field": "GDP pc", 
+      "type": "quantitative",
+      "scale": {"domain": [0, 120000]},
+      "axis": {"grid": false},
+      "title": "GDP per capita (US$)"
+      },
+
+    "y": {
+      "field": "Consumption pc", 
+      "type": "quantitative",
+      "axis": {"grid": false},
+      "title": "Wine Consumption per Capita (Litres)"
+      },
+
+      "tooltip": [
+        {"field":"Country Name", "type": "ordinal", "title":"Country"},
+        {"field":"GDP pc", "type": "quantitative", "title":"GDP per capita", "format":".1f"},
+        {"field":"Consumption pc", "type": "quantitative", "title":"Wine Consumption per Capita", "format":".2f"},
+        {"field":"Population", "type": "quantitative", "title":"Population", "format":","}
+      ]
+  }},
+
+    {
+      "mark": {"type": "line", "color": "grey"},
+
+      "transform": [{"regression": "Consumption pc", "on": "GDP pc"}],
+         
+      "encoding": {
+        "x": {"field": "GDP pc", "type": "quantitative"},
+        "y": {"field": "Consumption pc", "type": "quantitative"}
+      }
+    }
+]
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!-- Jude Tinkler-Davies, Data Science 2022 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+  <title>Project</title>
+  
+
+  <link rel="stylesheet" href="new_portfolio.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    
+  </style>
+
+  <!--The next three lines allow the Vega embed-->
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+</head>
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
+<body>
+  
+<!--Navigation bar and title-->
+  <div class="navigation">
+      <ul style= "padding-left: 0px;margin-top: 0px;">
+
+        <li>
+          <a href="new_portfolio.html">
+            <span class="icon"><i class="fa fa-code"></i></span>
+            <span class="title">Portfolio</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="active" href="project.html">
+            <span class="icon"><i class="fa fa-book"></i></span>
+            <span class="title">Project</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://rapidcharts.io/datascience">
+            <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+            <span class="title">Course</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/jtinklerdav/jtinklerdav.github.io">
+            <span class="icon"><i class="fa fa-github"></i></span>
+            <span class="title">Github</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  <div style="margin-left:150px;margin-right:5%;padding:2px 15px;height:1000px;">
+  
+   <header> 
+   <div class="title-bar">
+        <p>Jude Tinkler-Davies | Student ID: 20056609</p>
+  </div>
+    </header>
+    <div class="main-body"> 
+    
+<container class="hcontainer">
+    </container>
+     
+<container class="hcontainer">
+  <h2 class="bodyText"><span style="color: rgb(65, 48, 34); font-weight: 700;"> Wine Trends in the 21st Century </span></h2>
+    </container>  
+  
+<container class="hcontainer" id="container1">  
+
+<div class="myWeek">    
+        <h2>Map of global exports in 2021</h2>
+    <p>This map highlights the key wine exporting countries, it can be seen that countries in the milder regions (South and North) produce a greater volume of wine, this may be due to climate conditions.</p>
+    <div class="chart" id="Map2">
+        <script>
+            var myMap2 = "MAP_2021Exports.json";
+            vegaEmbed('#Map2', myMap2);
+        </script>
+    </div>
+
+    <p>To analyse the trends in the 21st Century I am going to focus on 9 countries: Algeria, Argentina, Australia, China, France, Italy, South Africa, United Kingdom and The United States of America. These countries have been chosen as they represent most global regions, 'Old World Wine producers' & 'New World wine Producers' as well as key importers and developing countries.  
+        <a href="https://github.com/jtinklerdav/jtinklerdav.github.io/tree/main/Project">(further information).</a>
+    </p>
+    <p>A graph showing trade</p>
+    <div class="chart" id="Export">
+        <script>
+            var myChart_Export = "Chart_final_exports.json";
+            vegaEmbed('#Export', myChart_Export);
+        </script>
+    </div>
+    <p>A graph showing Global Productivity increases</p>
+    <div class="chart" id="Productivity">
+        <script>
+            var myChart_Productivity = "Chart_SA_production.json";
+            vegaEmbed('#Productivity', myChart_Productivity);
+        </script>
+    </div>
+    <p>A graph showing Consumption</p>
+    <div class="chart" id="Consumption">
+        <script>
+            var myChart_Consumption = "Chart_final_consumption.json";
+            vegaEmbed('#Consumption', myChart_Consumption);
+        </script>
+    </div>
+    <h2>Map of global consumption in 2020</h2>
+    <p>This graph is highlighting the difference in wine consumption across the globe, it can be seen that the more economically developed countries tend to have a greater consumption.</p>
+    <div class="chart" id="Map1">
+        <script>
+            var myMap1 = "MAP_2020Consumption.json";
+            vegaEmbed('#Map1', myMap1);
+        </script>
+    </div>
+    <p>A graph showing regression</p>
+    <div class="chart" id="Regression1">
+        <script>
+            var myChart_Regression1 = "Chart_final_regression.json";
+            vegaEmbed('#Regression1', myChart_Regression1);
+        </script>
+    </div>
+    <p>A graph showing regression of Production vs consumption</p>
+    <div class="chart" id="Regression2">
+        <script>
+            var myChart_Regression2 = "Chart_regression_production.json";
+            vegaEmbed('#Regression2', myChart_Regression2);
+        </script>
+    </div>
+    <p>A graph showing regression of Islamic Population vs consumption</p>
+    <div class="chart" id="Regression3">
+        <script>
+            var myChart_Regression3 = "Chart_regression_Islam.json";
+            vegaEmbed('#Regression3', myChart_Regression3);
+        </script>
+    </div>
+    
+
+
+
+</div>
+
+  
+</container>  
+    
+</body>
+
+</html>

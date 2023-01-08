@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+
+<title>JTD | Project</title>
+
+
+<link rel="stylesheet" href="ProjectFinal.css">
+
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+
+
+</head>
+
+<body>
+
+<!--this is a heading at the top of my page-->
+ <div class="title">
+     <p>Jude Tinkler-Davies | Student ID: 20056609</p>
+</div>
+
+<!-- This is the title of my project-->
+<div class="wrap">
+    <h1>Data Science Project</h1>
+    <h2></h2>
+    <h2> Wine Trends in the 21st Century<h2>
+    <span style="display:block; height: 15px;"></span>
+    <a class="button" href="PortfolioFinal.html">Portfolio</a>
+    <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/tree/main">Github</a>
+    <a class="button" href="https://rapidcharts.io/datascience">Course</a>
+    <h2></h2>
+    <h2></h2>
+  </div>
+
+  <container class="container">
+</container>
+ 
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Aims </span></h2>
+</container>  
+
+<div class="mainbody">  
+    <p> In this project I want to present a clear depiction of the trends within the Global wine industry (consumption, trade and analysing similarities between wine producing countries). Having visualised this, I aim to analyse the causes behind these trends, in particular the consumption disparity between Countries. Therefore, the second half of my project aims to establish causality by undertaking regressions of wine consumption per capita on wine production per capita, GDP per capita, Islamic population in a country and the cost of wine.       
+        <br>
+        <br>
+        Furthermore, having researched the wine industry there is limited analysis and visualisation of the data which go beyond simple line charts, so I aim to use the data to create advanced visualisations for analysis.
+        <br>
+        <br>
+        To analyse the trends, I have selected 9 countries to represent key players in the market. These include traditional old world wine producers (France, Italy), new world wine producers (Argentina, South Africa, Australia), key importers (United States, United Kingdom) and emerging economies (Algeria, China). The 21st Century was chosen since there is limited data before 1995.
+    </p>  
+    <container class="container">
+    </container>
+     
+    <container class="container">
+    <h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Acessing the Data </span></h2>
+    </container>  
+
+
+    <p> I accrued data from a number of sources for my project: 
+        <a href="https://www.oiv.int/what-we-do/statistics">The International Organisation of Vine and Wine (OIV)</a>
+        , World Bank, 
+        <a href="https://www.trademap.org/Country_SelProduct_TS.aspx?nvpm=1%7c%7c%7c%7c%7c2204%7c%7c%7c4%7c1%7c1%7c2%7c2%7c1%7c2%7c1%7c1%7c1">Trademap.org</a>
+        , 
+        <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/average-price-750-mls-wine-in-us$">World Health Organisation (WHO)</a>
+         and 
+         <a href="https://web.archive.org/web/20110202124356/http://features.pewforum.org/muslim-population/">Pew Research Centre</a>.
+        <br> <br>
+        The OIV was my main source of data as it is the only database for wine variables with suitable data. Having considered the option of using an API I decided that it was not appropriate since there is no API offered by OIV, where all but one graph contains data sourced from OIV. Having downloaded base data in csv format I was required to combine many datasets within excel, merging population data numerous times from the World Bank, in particular, to calculate per capita values for the fair analysis of the trends.
+        <br><br>
+        The data downloaded from Trademap required me to index them to highlight the growth of trade.
+        <br> <br>
+        I also scraped data from the Pew Research Centre using pandas read_html in Colab before merging it with a csv previously downloaded. As with a number of datasets, I was required to edit country names and remove inappropriate data to create a useable final dataset. Furthermore I scraped data for average temperature and average rainfall from Wikipedia to create a useable dataset for my machine learning clustering analysis.
+        <br><br>
+        The analysis is replicable using the code provided and data sourced.
+    </p>
+
+
+<div class="chart" id="Map1">
+    <script>
+        var myMap1 = "MAP_2020Consumption.json";
+        vegaEmbed('#Map1', myMap1);
+    </script>
+</div>
+<p></p>
+<div class="wrap">
+    <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/Graph3_colab.ipynb">Graph 3 Colab</a>
+  </div>
+        
+    <div class="chart" id="Export">
+        <script>
+            var myChart_Export = "Chart_final_exports.json";
+            vegaEmbed('#Export', myChart_Export);
+        </script>
+    </div>
+    <div class="chart" id="Consumption">
+        <script>
+            var myChart_Consumption = "Chart_graph3.json";
+            vegaEmbed('#Consumption', myChart_Consumption);
+        </script>
+    </div>
+    <div class="photo">
+        <img src="project_machine2.jpg"> 
+        <script> 
+        var surf1 ="project_machine2.jpg";
+        </script>     
+    </div>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <div class="wrap">
+        <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/Machine_Learning_Project.ipynb">Graph 4 Colab</a>
+      </div>
+    
+<p> </p>
+
+<div class="chart" id="Regression1">
+    <script>
+        var myChart_Regression1 = "Chart_final_regression.json";
+        vegaEmbed('#Regression1', myChart_Regression1);
+    </script>
+</div>
+<div class="chart" id="Regression2">
+    <script>
+        var myChart_Regression2 = "Chart_regression_production.json";
+        vegaEmbed('#Regression2', myChart_Regression2);
+    </script>
+</div>
+<div class="chart" id="Regression3">
+    <script>
+        var myChart_Regression3 = "Chart_regression_Islam.json";
+        vegaEmbed('#Regression3', myChart_Regression3);
+    </script>
+</div>
+<div class="chart" id="Regression4">
+    <script>
+        var myChart_Regression4 = "Chart_regress_price.json";
+        vegaEmbed('#Regression4', myChart_Regression4);
+    </script>
+</div>
+<h2></h2>
+<div class="wrap">
+    <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/consumption_production_regression.ipynb">Graph 6 Colab</a>
+    <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/regression_Islam_consumption.ipynb">Graph 7 Colab</a>
+  </div>
+</div>
+
+<container class="container">
+</container>
+ 
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Data Cleaning and Visualisation </span></h2>
+</container>  
+
+<p>
+    When visualising my map, I had several missing data points. Therefore, I created ‘null’ values for all countries on the base topojson map, encoding them as grey so that the whole world map was seen. I used a log scale so that differences could be observed between the countries with lower consumption levels.
+    <br><br>
+    I calculated index values in excel for trade and excluded China since its nominal export value was so low the fluctuations led to an index value over 2,000. For my third graph I created a country selector with a changing y axis scale after selection so that individual countries could be seen, this allowed consumption trends for each country to be seen with greater clarity. For both of these graphs I used a timeParse to transform my nominal ‘Year’ data into temporal data so that year selectors could be used.
+    <br><br>
+    For the regressions I merged datasets within excel from numerous sources. I manually edited countries names to match up data values. Since there were large differences within each dataset I included a mouse interactive function so different clusters of values could be inspected closer and a selector for Continents so regional grouping could be visualised too.
+    <br><br>
+    For all graphs I used a number of encodings and transformations such as tooltips and year selectors to allow for greater user interactivity with the graphs. 
+</p>
+
+<container class="container">
+</container>
+ 
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Conclusions </span></h2>
+</container>  
+
+<p>
+    Trade has increased globally by 250%, furthermore this trend is seen within individual countries too with exports increasing in 8 out of the 9 countries. Old world countries have not increased at the same rate, suggesting that there is global change in proportions of exports from old world to new world wine production. 
+    <br><br>
+    Globally consumption is reducing slowly, however key importing countries (UK, USA) and emerging economies (China, Algeria) are experiencing strong increases. Contrary to this, the countries who consume the most (France, Italy, Argentina) and other key producers are reducing consumption levels. However, within all these trends there are fluctuations, more research could lead to understanding the causes of the year-on-year consumption changes.
+    <br><br>
+    The hierarchical clustering dendogram shows that the European countries are similar and separate to the other countries, unsurprisingly France and Italy are the most similar. New World wine producers also have similar characteristics and Algeria is the outlier within the selected 9 countries.
+    <br><br>
+    There is evident disparity between countries consumption levels as seen by the map. The 4 regressions indicate that there is strong positive relationship between a country’s ability to produce wine and consumption, more developed countries are also more likely to consume greater levels of wine. Furthermore, the greater the Muslim population the lower the consumption level is expected to be and as the price of wine increases, consumption falls but there is a very low correlation(0.02) for this.    <br><br>
+</p>
+
+</div>
+<p> </p>
+<p> </p>
+<container class="container">
+</container>
+<container class="container">
+</container>
+
+</body>
+
+</html>

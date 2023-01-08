@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+
+<title>JTD | Portfolio</title>
+
+
+<link rel="stylesheet" href="PortfolioFinal.css">
+
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+
+
+</head>
+
+<body>
+
+<!--this is a heading at the top of my page-->
+ <div class="title">
+     <p>Jude Tinkler-Davies | Student ID: 20056609</p>
+</div>
+
+<!-- This is the title of my project-->
+<div class="wrap">
+    <h1>Data Science Portfolio</h1>
+    <p>  </p>
+    <p> </p>
+    <br>
+    <br>
+    <span style="display:block; height: 15px;"></span>
+    <a class="button" href="ProjectFinal.html">Project</a>
+    <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/tree/main">Github</a>
+    <a class="button" href="https://rapidcharts.io/datascience">Course</a>
+  </div>
+
+
+ 
+    <!--Homework 1-->
+    <container class="container">
+    </container>   
+    <container class="container">
+    <h2 class="bodyText"><span style="color: #1995ad; font-weight: 700"> Week 1 </span></h2>
+    </container>  
+ <div class="mainbody"> 
+    <h2>Uploading 2 graphs using code from rapidcharts.io</h3>
+    <p>The first chart tracks the inflation rate in the UK using 3 different measures for this: CPI, RPI and the CPI with housing costs.</p>
+    <div class="chart" id="Chart1">
+        <script>
+            var myChart1 = "chart1_inflation_comparisons.json";
+            vegaEmbed('#Chart1', myChart1);
+        </script>
+    </div>
+
+    <p>My second chart looks at a breakdown of CPI and each sectors contribution to inflation</p>
+    <div class="chart" id="Chart2"> 
+        <script>
+            var myChart2 = "chart2_inflation_sources.json";
+            vegaEmbed('#Chart2', myChart2);
+        </script>
+    </div>
+  </div>
+<!--Homework 2 -->  
+    <container class="container">
+    </container>   
+    <container class="container">
+    <h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 2 </span></h2>
+    </container> 
+  <div class="mainbody">
+    <h2>Replicating a graph from the FT, improving it and uploading an original graph delivered by an API</h3>
+    <p>A replication of the original graph</p>
+    <div class="chart" id="ChartIMForiginal"> 
+        <script>
+            var myChartIMForiginal = "IMF_edited_graph.json";
+            vegaEmbed('#ChartIMForiginal', myChartIMForiginal);
+        </script>
+    </div>
+
+    <div class="chart" id="ChartIMFupdated"> 
+        <script>
+            var myChartIMFupdated = "IMF_updated_graph.json";
+            vegaEmbed('#ChartIMFupdated', myChartIMFupdated);
+        </script>
+    </div>
+    <p>Having adjusted the data, the riskiest year for investing was 1984, since the credit outstanding was the largest as a percentage of global GDP.</p>
+  </div>
+
+  
+ 
+<!--Homework 3 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 3 </span></h2>
+</container> 
+<div class="mainbody">
+    <h2>Creating 2 charts from scratch using inline data</h3>
+    <p>This data was sourced from the World Bank database, downloaded onto my computer and then transformed into a JSON format in Colab. Having done that I created 2 charts to show the access to electricity amongst different regions. I have also included the Global value to compare each regions performance in the global setting.</p>
+    <div class="chart" id="ChartElectricity1_4"> 
+        <script>
+            var myChartElectricity1_4 = "ChartElectricity1_4.json";
+            vegaEmbed('#ChartElectricity1_4', myChartElectricity1_4)
+        </script>
+    </div>
+    <p>The second graph uses a bar chart with a slider for years and tooltip. It is more effective at comparing regions at similar levels.</p>
+    <div class="chart" id="ChartElectricity2">
+        <script>
+            var myChartElectricity2 = "ChartElectricity2.json";
+            vegaEmbed('#ChartElectricity2', myChartElectricity2)
+        </script>
+    </div>
+</div>
+  
+
+<!--Homework 4 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 4 </span></h2>
+</container> 
+    <div class="mainbody">
+        <h2>Scraping data from a website, editing the dataset in Google Colab (link below), then create a chart.</h3>
+        <p>I scraped my data from the academic paper titled
+          <a href="https://www.sciencedirect.com/science/article/pii/S2212977418300474">'The European wine Export Cycle'</a>
+          . I then had to edit it and put into long form so that the data could then be placed into a multi-series line chart.</p>
+          <div class="wrap">
+            <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/Task4_Scrape.ipynb">Colab</a>
+          </div>
+        <div class="chart" id="ChartWeek4">
+            <script>
+                var myChartWeek4 = "Chart_Week4.json";
+                vegaEmbed('#ChartWeek4', myChartWeek4)
+            </script>
+        </div>
+        <p>I chose this graph as it is interesting to see how export growth varies and whether certain countries have similar patterns. </p>
+    </div>
+
+    
+<!--Homework 5 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 5 </span></h2>
+</container> 
+<div class="mainbody">
+  <p>Building a dashboard of 9 different series, batch downloaded as JSON files. Using google Colab I created a loop to download 9 time series from APIs using the ONS. I have chosen to produce 9 graphs on UK unemployment. </p>
+  <p>The Colab coding is in the link below, as is the link to my dashboard</p>   
+</div>
+
+<div class="wrap">
+  <a class="button" href="week5.html">Dashboard</a>
+  <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/ONS_API_Download.ipynb">Colab</a>
+</div>
+
+
+    
+<!--Homework 7 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 7 </span></h2>
+</container> 
+<div class="mainbody">
+    <h2>Creating a base map of a region and then creating a choropleth map using the "lookup" transformation</h3>
+    <p>A base map depicting Europe with a "tooltip" encoding to show the country when the user hovers over a country.</p>
+    <div class="chart" id="BaseMap"> 
+        <script>
+            var myChartEUBaseMap = "EU_base_map.json";
+            vegaEmbed('#BaseMap', myChartEUBaseMap)
+        </script>
+    </div>
+    <p>The map shows Europe, varied by their Fifa Rankings. The Eastern and smaller countries tend to have lower ratings compared to the West.</p>
+    <div class="chart" id="ChartFifaMap">
+        <script>
+            var myChartFifaRankings = "Chart_Fifa_Rankings.json";
+            vegaEmbed('#ChartFifaMap', myChartFifaRankings)
+        </script>
+    </div>
+</div>
+    
+<!--Homework 8 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 8 </span></h2>
+</container> 
+<div class="mainbody">
+    <h2>2 graphs supporting a statement made in the Festival of Economics</h2>
+    <p>Dr Sarah Smith argued in the talk on Prices and Wages: Private wage growth was higher than that of the public wage growth, this is driven by growth in financial services growth in particular.</p>
+    <div class="chart" id="ChartWeek8_1"> 
+        <script>
+            var myChartWeek8_1 = "Chart_Week8_1.json";
+            vegaEmbed('#ChartWeek8_1', myChartWeek8_1)
+        </script>
+    </div>
+    <div class="chart" id="ChartWeek8_2"> 
+        <script>
+            var myChartWeek8_2 = "Chart_Week8_2.json";
+            vegaEmbed('#ChartWeek8_2', myChartWeek8_2)
+        </script>
+    </div>
+    <p>Both graphs back up the argument, where private wage growth (apart from during covid) was greater, so too was financial services wage growth</p>
+</div>
+    
+<!--Homework 9 -->  
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Week 9 </span></h2>
+</container> 
+<div class="mainbody">
+    <h2>Producing 2 graphs using advanced analytics</h2>
+    <p>A graph regressing GDP per capita on Wine consumption per capita</p>
+    <div class="chart" id="ChartWeek9_1">
+        <script>
+            var myChartWeek9_1 = "Chart_Advanced2.json";
+            vegaEmbed('#ChartWeek9_1', myChartWeek9_1)
+        </script>
+    </div>
+    <p>A scatter plot of countries wine production of wine and their average temperature</p>
+    <div class="chart" id="ChartWeek9_2">
+        <script>
+            var myChartWeek9_2 = "Chart_Advanced1.json";
+            vegaEmbed('#ChartWeek9_2', myChartWeek9_2)
+        </script>
+    </div>
+</div>
+    
+<!--Homework 10-->
+<container class="container">
+</container>   
+<container class="container">
+<h2 class="bodyText"><span style="color: #1995ad; font-weight: 700;"> Weeks 10 & 11 </span></h2>
+</container>  
+<div class="mainbody">
+    <h2>Conducting applied data anlysis using 2 machine learning techniques</h2>
+    <div class="wrap">
+        <a class="button" href="https://github.com/jtinklerdav/jtinklerdav.github.io/blob/main/MachineLearning.ipynb">Colab</a>
+      </div>
+    <h2>Task 1: Supervised Learning - Classification</h2>
+    <p>I used classification to see whether the Continent of a Country could be predicted based on Wine Market and Climate Statistics.</p>
+    <div class="photo"><img src="Classification_final.jpg"> </div>
+    <p>The correct continent was predicted with a 73% accuracy, Countries in the Americas were the hardest to predict and Europe had the most similar charachteristics.</p>
+    <p></p>
+    <p></p>
+    <h2>Task 2: Unsupervised Learning - Clustering</h2>
+    <p>Using a dendogram to evaluate the similarities and differences between key wine producers, in particular New World and Old World Countries.</p>
+    <div class="photo"><img src="Dendogram_final.jpg"> </div>
+    <p>Overall, the groupings show that New-World Countries predominantly exhibit similar characteristics, and so too do the Old-World Countries, there are some exceptions however (Argentina, USA).</p>
+    <p> </p>
+    <p> </p>
+</div>
+<container class="container">
+</container>
+<container class="container">
+</container>
+</body>
+
+<script>
+    
+    var surf1 ="Dendogram_final.jpg";
+    var surf2 ="Classification_final.jpg";
+ 
+
+</script>
+
+</html>

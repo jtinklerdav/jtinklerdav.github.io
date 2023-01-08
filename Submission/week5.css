@@ -1,0 +1,66 @@
+
+.title{
+	margin:  0 auto 0 auto;
+	line-height: 0;
+	top: 0%;
+	margin-left: 0%;
+	margin-right: 0%;
+	padding: 5px 60px;
+	margin: 0;
+	background-color: none;
+	height: auto;
+	
+	}
+
+p {
+	font-size: 16px;
+	margin: 5px 5px;
+	line-height: 22.4px;
+	color: #1995ad;
+    text-align: center;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	background-color: #bcbabe;
+	max-width: 1800px; 
+	margin: 0 auto 0 auto !important;
+	padding: 0 5 0 5; 
+	float: none !important; 
+}
+
+
+
+
+h1 {
+	font-family: "Lato", sans-serif;
+	font-variant: large;
+	font-size: 50px;
+	color: #1995ad;
+	margin: 30px 0px 30px 0px  ;
+	height: 40px;
+    text-align: center
+}
+.chart {
+  
+	background-color: #f1f1f2;
+	width: auto;
+	min-width: auto;
+	align-items: center;
+	justify-content: center;
+	position:static;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-style: solid;
+	border-color: #f1f1f2;
+	border-width: 3px;
+	border-radius: 30px;
+	text-align: center;
+	padding: 10px;
+	flex-flow: row wrap;
+	}
+	.chart:hover {
+		transform: scale(1.04, 1.04);
+		  transition: 0.6s;   
+	}

@@ -1,0 +1,102 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Graph 3: Wine Consumption in the 21st Century",
+      "subtitle": ["Wine consumption (1000hl)", "Source: OIV Statistics, World Bank",""],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_consumption_pc",
+      "format": {"type": "json"}
+    },
+    "height": 300,
+    "width": 300,
+    "background": null,
+    "mark": {"type": "line", "strokeWidth": 2},
+    "transform": [
+      {"calculate": "timeParse(datum.Year, '%Y')", "as": "date"},
+      {"filter": "datum.Year>minYear"},
+      {"filter": "datum.Year<maxYear"},
+      {"filter": {"selection": "country"}}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 1995,
+        "bind": {
+          "input": "range",
+          "min": 1995,
+          "max": 2021,
+          "step": 1,
+          "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2021,
+        "bind": {
+          "input": "range",
+          "min": 1995,
+          "max": 2021,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+    "selection": {
+      "country": {
+        "type": "single",
+        "fields": ["Country"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Algeria",
+            "Argentina",
+            "Australia",
+            "China",
+            "France",
+            "Italy",
+            "South Africa",
+            "United Kingdom",
+            "United States of America",
+            "World"
+          ],
+          "name": "Country"
+        }
+      }
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "timeUnit": "year",
+        "title": null,
+        "axis": {"grid": false, "ticks": false}
+      },
+      "y": {
+        "field": "cons_pc",
+        "type": "quantitative",
+        "title": "Consumption per capita",
+        "axis": {"grid": false, "labelFontSize": 11, "ticks": false}
+      },
+      "tooltip": [
+        {"field": "Country", "title": "Country", "type": "nominal"},
+        {"field": "date", "timeUnit": "year","title": "Year", "type": "ordinal"},
+        {
+          "field": "cons_pc",
+          "title": "Wine Consumption",
+          "type": "quantitative"
+        }
+      ],
+      "color": {
+        "field": "Country",
+        "title": null,
+        "legend": {"title": "", "orient": "right"},
+        "scale": {"scheme": "yelloworangered"}
+      }
+    }
+  }

@@ -1,0 +1,135 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Graph 8: Wine Consumption on the cost of wine",
+      "subtitle": [
+        "Cost of 750ml Wine (US$) (x), Wine Consumption per capita (y). 2016 data",
+        "Source: World Bank, OIV Statistics, WHO"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor": "black"
+    },
+    "height": 400,
+    "width": 400,
+    "background": null,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jtinklerdav/jtinklerdav.github.io/main/Project/DATA_regression_price",
+      "format": {"type": "json"}
+    },
+    "layer": [
+      {
+        "selection": {
+          "picked": {
+            "empty": "none",
+            "bind": {
+              "Continent": {
+                "input": "select",
+                "options": [
+                  "No Continent selected",
+                  "Africa",
+                  "Asia",
+                  "Europe",
+                  "North America",
+                  "Oceania",
+                  "South America"
+                ],
+                "name": "Select a Continent: "
+              }
+            },
+            "type": "single",
+            "fields": ["Continent"]
+          },
+          "grid": {
+            "type": "interval",
+            "bind": "scales",
+            "on": "[mousedown, window:mouseup] > window:mousemove!",
+            "translate": "[mousedown, window:mouseup] > window:mousemove!",
+            "zoom": "wheel!",
+            "resolve": "global"
+          }
+        },
+        "mark": {"type": "point", "filled": true},
+        "encoding": {
+          "color": {
+            "value": "#e66a52",
+            "condition": {
+              "field": "Cluster",
+              "selection": "picked",
+              "type": "nominal",
+              "legend": null
+            }
+          },
+          "size": {
+            "value": 70,
+            "condition": {"value": 120, "selection": "picked"}
+          },
+          "opacity": {
+            "value": 0.6,
+            "condition": {"value": 1, "selection": "picked"}
+          },
+          "x": {
+            "field": "Cost of 750ml Wine (US$)",
+            "scale": {"zero": false},
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "labelColor": "black",
+              "titleColor": "black",
+              "grid": false,
+              "title": "Cost of 750ml Wine (US$)"
+            }
+          },
+          "y": {
+            "field": "Consumption pc",
+            "scale": {"zero": false},
+            "type": "quantitative",
+            "axis": {
+              "labelColor": "black",
+              "titleColor": "black",
+              "grid": false,
+              "title": "Wine Consumption per Capita (litres)"
+            }
+          },
+          "tooltip": [
+            {"field": "Continent", "type": "nominal", "title": "Continent"},
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {"field": "Cost of 750ml Wine (US$)", "type": "nominal", "title": "Cost of 750ml Wine (US$)"},
+            {
+              "field": "Consumption pc",
+              "type": "nominal",
+              "title": "Wine Consumption per Capita"
+            },
+            {"field": "Population", "type": "nominal", "title": "Population"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "#1995ad"},
+        "transform": [
+          {"regression": "Consumption pc", "on": "Cost of 750ml Wine (US$)", "extent": [0, 24]}
+        ],
+        "encoding": {
+          "x": {"field": "Cost of 750ml Wine (US$)", "type": "quantitative"},
+          "y": {"field": "Consumption pc", "type": "quantitative"}
+        }
+      },
+      {
+        "transform": [
+          {"regression": "Consumption pc", "on": "Cost of 750ml Wine (US$)", "params": true},
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "#1995ad",
+          "x": 390,
+          "align": "right",
+          "y": 15,
+          "size": 15
+        },
+        "encoding": {"text": {"type": "nominal", "field": "R2"}}
+      }
+    ]
+  }

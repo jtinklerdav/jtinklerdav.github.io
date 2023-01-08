@@ -1,0 +1,135 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-size:30px;
+  padding-top: 0px;
+}
+
+.header{
+  text-align: center;
+  line-height: 42px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+#navbar {
+  overflow: hidden;
+  background: linear-gradient(132deg, #e8c2bc, #c78377, #c79e77);
+  background-animation: Gradient 10s ease infinite;
+  padding: 300px 10px;
+  transition: 0.8s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+#navbar #logo {
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.5s;
+  background-color: transparent;
+  color: #f0dddd;
+  border: transparent;
+  padding-left: 150px;
+  line-height: 40px;
+}
+
+#navbar-right {
+  float: right;
+}
+
+button {
+  margin: 20px;
+  outline: none;
+}
+
+.custom {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  background: transparent;
+  cursor: arrow;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.btn-active {
+  line-height: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: none;
+  font-weight: bold;
+}
+
+.btn {
+  background: transparent;
+  color: #f0dddd;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+}
+.btn:hover {
+  background: transparent;
+  color: #663b33;
+}
+.btn:before,
+.btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #663b33;
+  transition:400ms ease all;
+}
+.btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn:hover:before,
+.btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #deada2 50%, #9c9686 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }}
