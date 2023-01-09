@@ -48,10 +48,10 @@
           "resolve": "global"
         }
       },
-      "mark": {"type": "point","filled": true},
+      "mark": {"type": "point", "filled": true},
       "encoding": {
         "color": {
-          "value": "#D34C0C2",
+          "value": "#D34C0C",
           "condition": {
             "selection": "picked",
             "value": "#1995ad"
