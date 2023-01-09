@@ -5,7 +5,7 @@
     "subtitle": ["GDP per capita (x), Wine Consumption per capita (y). 2020 data", "Source: World Bank, OIV Statistics"],
         "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
-    "anchor": "start",
+    "anchor": "start", 
     "color": "black",
     "subtitleColor": "black"
   },
