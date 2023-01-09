@@ -54,12 +54,10 @@
       "mark": {"type": "point", "filled": true},
       "encoding": {
         "color": {
-          "value": "#e66a52",
+          "value": "#D34C0C",
           "condition": {
-            "field": "Cluster",
             "selection": "picked",
-            "type": "nominal",
-            "legend": null
+            "value": "#1995ad"
           }
         },
         "size": {
@@ -67,8 +65,8 @@
           "condition": {"value": 120, "selection": "picked"}
         },
         "opacity": {
-          "value": 0.6,
-          "condition": {"value": 1, "selection": "picked"}
+          "value": 0.5,
+          "condition": {"value": 0.9, "selection": "picked"}
         },
         "x": {
           "field": "Percentage",
