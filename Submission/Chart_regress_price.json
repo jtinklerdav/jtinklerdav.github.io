@@ -54,21 +54,19 @@
         "mark": {"type": "point", "filled": true},
         "encoding": {
           "color": {
-            "value": "#e66a52",
-            "condition": {
-              "field": "Cluster",
-              "selection": "picked",
-              "type": "nominal",
-              "legend": null
-            }
+          "value": "#D34C0C",
+          "condition": {
+            "selection": "picked",
+            "value": "#1995ad"
+          }
           },
           "size": {
             "value": 70,
             "condition": {"value": 120, "selection": "picked"}
           },
           "opacity": {
-            "value": 0.6,
-            "condition": {"value": 1, "selection": "picked"}
+            "value": 0.5,
+            "condition": {"value": 0.9, "selection": "picked"}
           },
           "x": {
             "field": "Cost of 750ml Wine (US$)",
