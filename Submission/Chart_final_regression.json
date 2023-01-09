@@ -63,7 +63,7 @@
         },
         "opacity": {
           "value": 0.5,
-          "condition": {"value": 0.9, "selection": "picked"}
+          "condition": {"value": 1, "selection": "picked"}
         },
         "x": {
           "field": "GDP pc",
