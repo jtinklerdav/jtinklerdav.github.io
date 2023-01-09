@@ -48,7 +48,7 @@
           "resolve": "global"
         }
       },
-      "mark": {"type": "point", "filled": true},
+      "mark": {"type": "point","filled": true},
       "encoding": {
         "color": {
           "value": "#D34C0C2",
