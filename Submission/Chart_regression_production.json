@@ -82,7 +82,8 @@
             "scale": {"zero": false},
             "type": "quantitative",
             "axis": {
-              "labelColor": "black",,
+              "labelColor": "black",
+              "titleColor": "black",
               "grid": false,
               "title": "Wine Consumption per Capita (litres)"
             }
