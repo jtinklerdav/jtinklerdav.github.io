@@ -62,7 +62,7 @@
             "condition": {"value": 120, "selection": "picked"}
           },
           "opacity": {
-            "value": 0.5,
+            "value": 0.5, 
             "condition": {"value": 1, "selection": "picked"}
           },
           "x": {
